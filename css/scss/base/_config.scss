@@ -1,0 +1,121 @@
+//**
+// Project Settings
+//**
+
+// Consistent settings
+$br: 5px; // Border-radius
+$btn-br: 5px; // Button border-radius
+$padding: 40px; // Padding and margins
+$line-height: 44px; // Consistent height for buttons, inputs etc.
+
+
+
+
+
+// Responsive breakpoints
+$small-break: 480px;
+$big-break: 780px;
+
+
+
+
+
+// Better default colors
+// Cool
+$aqua:  #7fdbff;
+$blue:  #0074d9;
+$navy:  #001f3f;
+$teal:  #39cccc;
+$green: #2ecc40;
+$olive: #3d9970;
+$lime:  #01ff70;
+// Warm
+$yellow:  #ffdc00;
+$orange:  #ff9002;
+$red:     #ff4136;
+$fuchsia: #f012be;
+$purple:  #b10dc9;
+$maroon:  #85144b;
+// Gray Scale
+$white:  #fff;
+$silver: #ddd;
+$grey:   #aaa;
+$black:  #111;
+
+
+
+
+
+// Project color variables
+$primary-color: #1271db;
+$secondary-color: #233e5b;
+$tertiary-color: #aaa;
+
+
+
+
+
+$danger-color: $red; // Bad color for errors, validation etc.
+$success-color: $green; // Good color for success etc.
+$info-color: $blue; // Good color for success etc.
+$warning-color: $orange; // Good color for success etc.
+$subtle-color: $grey; // Subtle color for subtle text
+
+:root {
+font-size: 16px;
+}
+$font10px:  0.625rem;
+$font11px:	0.6875rem;
+$font12px:	0.75rem;
+$font13px:	0.8125rem;
+$font14px:	0.875rem;
+$font15px:	0.9375rem;
+$font16px:	1rem;
+$font17px:	1.0625rem;
+$font18px:	1.125rem;
+$font19px:	1.1875rem;
+$font20px:	1.25rem;
+$font21px:	1.3125rem;
+$font22px:	1.375rem;
+$font23px:	1.4375rem;
+$font24px:	1.5rem;
+$font25px:	1.5625rem;
+$font26px:	1.625rem;
+$font27px:	1.6875rem;
+$font28px:	1.75rem;
+$font29px:	1.8125rem;
+$font30px:	1.875rem;
+$font31px:	1.9375rem;
+$font32px:	2rem;
+$font33px:	2.0625rem;
+$font34px:	2.125rem;
+$font35px:	2.1875rem;
+$font36px:	2.25rem;
+$font37px:	2.3125rem;
+$font38px:	2.375rem;
+$font39px:	2.4375rem;
+$font40px:	2.5rem;
+$font41px:	2.5625rem;
+$font42px:	2.625rem;
+$font43px:	2.6875rem;
+$font44px:	2.75rem;
+$font45px:	2.8125rem;
+$font46px:	2.875rem;
+$font47px:	2.9375rem;
+$font48px:	3rem;
+$font49px:	3.0625rem;
+$font50px:	3.125rem;
+$font51px:	3.1875rem;
+$font52px:	3.25rem;
+$font53px:	3.3125rem;
+$font54px:	3.375rem;
+$font55px:	3.4375rem;
+$font56px:	3.5rem;
+$font57px:	3.5625rem;
+$font58px:	3.625rem;
+$font59px:	3.6875rem;
+$font60px:	3.75rem;
+$font61px:	3.8125rem;
+$font62px:	3.875rem;
+$font63px:	3.9375rem;
+$font64px:	4rem;

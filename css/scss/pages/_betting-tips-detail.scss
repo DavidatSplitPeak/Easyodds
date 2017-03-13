@@ -1,0 +1,144 @@
+//**
+// Betting Tips Details
+//**
+
+.padding-detail {
+  padding-right:237px;
+  @include desktopsm {
+    padding-right:40px;
+  }
+  @include mobile768 {
+    padding-right:0px;
+  }
+}
+.content-detail {
+  background:#fff;
+  .text-detail {
+    padding:30px;
+    @include mobile {
+      padding:15px;
+      img {
+        width:100%;
+      }
+    }
+
+    p {
+      margin-bottom:23px;
+    }
+    h3 {
+      margin-top:0px;
+      margin-bottom:15px;
+      font-size: $font22px;
+      font-family: 'Francois One', sans-serif;
+      letter-spacing: 1px;
+      font-weight:normal;
+    }
+  }
+}
+.bet-now {
+  font-weight:bold;
+  font-size: $font13px;
+}
+.join-today {
+  overflow:hidden;
+  padding:30px 30px 0px 30px;
+  @include mobile {
+    padding:10px 20px 0px 20px;
+    overflow:initial;
+    text-align:center;
+  }
+  @include tablet {
+    padding:10px 20px 0px 20px;
+    overflow:initial;
+    text-align:center;
+  }
+  @include laptop-down {
+    padding:10px 20px 0px 20px;
+    overflow:initial;
+    text-align:center;
+  }
+  h4 {
+    font-size: $font17px;
+    margin-top:20px;
+    color:#000;
+    float:left;
+    @include mobile {
+      float:none;
+      margin-bottom:30px;
+    }
+    @include tablet {
+      float:none;
+      text-align:center;
+      margin-bottom:20px;
+    }
+    @include laptop-down {
+      float:none;
+      text-align:center;
+      margin-bottom:20px;
+    }
+    span {
+      color:#feca10;
+    }
+  }
+  .btn {
+    float:right;
+    padding:20px 40px;
+    @include mobile {
+      float:none;
+      display:block;
+    }
+    @include tablet {
+      float:none;
+    }
+    @include laptop-down {
+      float:none;
+    }
+  }
+}
+.line-best-odds {
+  position:relative;
+  padding-right:200px;
+  @include mobile {
+    padding:0px 15px;
+  }
+  .btn {
+    position:absolute;
+    width:200px;
+    position:absolute;
+    top:0px;
+    right:0px;
+    padding:20px 10px;
+    @include mobile {
+      position:relative;
+      padding:10px;
+      font-size:14px;
+      width:100%;
+    }
+  }
+  table {
+    width:100%;
+    tr {
+      td {
+        border-left:1px solid #f1f0f0;
+        border-bottom:1px solid #f1f0f0;
+        padding:10px;
+        text-align:center;
+        font-size:12px;
+        line-height:16px;
+        @include mobile {
+          padding:5px;
+        }
+        &:first-child {
+          border-left:0px;
+        }
+        h4 {
+          font-weight:normal;
+          color:#23343a;
+          @include mobile {
+            font-size:13px;
+          }
+        }
+      }
+    }
+  }
+}

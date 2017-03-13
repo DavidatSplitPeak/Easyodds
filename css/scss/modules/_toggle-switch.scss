@@ -1,0 +1,57 @@
+// One variable to rule them all :)
+
+// All dimentions are based on this one variable; Change it's value and see everythinmg else change accordingly.
+
+$width: 35px; // Change Me
+$height: 15px;
+
+.card input[type='checkbox'] {
+  display: none;
+  
+  &:checked ~ .toggle {
+    background: #00bcd3;
+    left: ($width - ($height * 1.4 - $height) / 2) - $height;
+    transition: .5s;
+  }
+  
+  &:checked ~ .switch {
+    background: #9ce5ee;  
+    transition: .5s;
+  }
+}
+
+.switch {
+  display: block;
+  width: $width;
+  height: $height;
+  background: #e8e9ea;
+  border-radius: $height / 2;
+  position: absolute;
+  top: 0;
+  transition: .5s;
+}
+.toggle {
+  height: $height * 1.4;
+  width: $height * 1.4;
+  border-radius: 50%;
+  background: #d9dbdc;
+  position: absolute;
+  top: ($height * 1.4 - $height) / -2;
+  left: ($height * 1.4 - $height) / -2;
+  box-shadow: 0 $width / 50 $width / 25 rgba(black, .4);
+  transition: .5s;
+}
+
+.card {
+  display: inline-block;
+  margin: (($height * 1.4 - $height) / 2) + 5px;
+  margin: (($height * 1.5 - $height) / 2);
+  width: $width;
+  height: $height;
+  text-align: center;
+  position: relative;
+  label {
+    display:block;
+  }
+}
+

@@ -1,0 +1,169 @@
+//**
+// Betting Tips Details
+//**
+
+.content-bookmaker {
+  @include mobile {
+    padding:15px;
+  }
+  @include tablet {
+    padding:15px;
+  }
+  .box-white {
+    padding:40px;
+    @include mobile {
+      padding:0px;
+    }
+  }
+  .box-bookmaket {
+    margin-bottom:60px;
+    @include mobile {
+      margin-bottom:0px;
+    }
+  }
+  .table-star {
+    width:100%;
+    @include mobile {
+      margin-top:20px;
+    }
+    tr {
+      td {
+        padding:10px;
+        font-weight:bold;
+        font-size:$font12px;
+        .fa-star {
+          font-size:$font25px;
+          color:#fdcb2e;
+          margin:0px 2px;
+          @include mobile {
+            font-size:$font20px;
+          }
+          &.no-star {
+            color:#f4f4f4;
+          }
+        }
+      }
+      &.total-star {
+        td {
+          border-top:1px solid #f6f6f6;
+          i {
+            font-size:12px;
+          }
+          h3 {
+            font-size:32px;
+            color:#23343a;
+            margin:0px;
+            span {
+              font-size:25px;
+              color:#989da0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .info-bookmaker {
+    padding:30px 70px 70px 70px;
+    background:#4b3a48;
+    color:#fff;
+    position:relative;
+    @include mobile {
+      padding:30px 50px 30px 50px;
+      margin-top:20px;
+      margin-bottom:30px;
+    }
+    img {
+      display:block;
+      margin-bottom:20px;
+    }
+    .btn {
+      margin-top:30px;
+      @include mobile {
+        left:0px;
+      }
+    }
+    .text-right {
+      text-align:left;
+    }
+
+  }
+  .box-bookmaket-about {
+      .pull-right {
+        @include mobile {
+          float:none !important;
+        }
+      }
+      
+    .pull-left {
+      @include mobile {
+        float:none !important;
+      }
+    }
+    .fea-bookmaker {
+      @include mobile {
+        margin:0px 45px 20px 45px;
+      }
+      h3 {
+        color:#23343a;
+        font-size:$font22px;
+        margin-top:0px;
+        margin-bottom:15px;
+        font-family: 'Francois One', sans-serif;
+        font-weight:normal;
+      }
+      ul {
+        padding:10px 25px;
+        li {
+          list-style:outside;
+          margin:7px 0px;
+        }
+      }
+    }
+  }
+  .what-think {
+        padding:40px 70px 40px 70px;
+        background:#f4f4f4;
+        position:relative;
+        @include mobile {
+          margin-bottom:0px;
+          padding:30px 50px 30px 50px;
+        }
+        .btn {
+          margin-top:30px;
+        }
+        h3 {
+          color:#23343a;
+          font-size:$font22px;
+          margin-top:0px;
+          margin-bottom:15px;
+          font-family: 'Francois One', sans-serif;
+          font-weight:normal;
+        }
+      
+      }
+}
+.contact-info-bookmark {
+  margin-bottom:20px;
+    p {
+      margin-bottom:20px;
+      color:#00bcd3;
+      img {
+        margin-right:10px;
+      }
+    }
+}
+.social-contact {
+  a {
+    display:inline-block;
+    margin-right:5px;
+    &:hover {
+      opacity:0.7;
+    }
+    @include mobile {
+       margin-right:3px;
+    }
+  }
+  img {
+    width:29px;
+  }
+}

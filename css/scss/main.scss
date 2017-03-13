@@ -1,0 +1,69 @@
+// Reset default browser styles using Normalize
+//@import "../../bower_components/normalize-scss/fork-versions/default/_normalize.scss";
+
+//bootstrap
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+// Install FontAwesome for useful icons
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+// Import fonts from Google
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,400italic,500,600,700,600italic,700italic);
+
+// Vendor
+@import "vendor/ui-datepicker";
+
+// Additional styles to think about
+@import "base/responsive";
+@import "base/print";
+
+// Set variables and reusable mixins
+@import "base/config";
+@import "base/mixins";
+@import "base/type";
+
+// Bootstrap overwrites
+
+@import "bootstrap/dropdowns";
+
+@import "modules/footer";
+@import "modules/header";
+@import "modules/slick-theme";
+@import "modules/slick";
+@import "modules/scrollbar";
+@import "modules/category-menu";
+@import "modules/menu-slide-mobile";
+@import "modules/table-home";
+@import "modules/table-match";
+@import "modules/checkbox-radio";
+@import "modules/toggle-switch";
+
+// Specific project styles, add any section specific sass modules here
+@import "pages/style";
+@import "pages/home";
+@import "pages/match-result";
+@import "pages/horse-racing";
+@import "pages/signup";
+@import "pages/login";
+@import "pages/betting-tips";
+@import "pages/betting-tips-detail";
+@import "pages/tipsters";
+@import "pages/bookmaker-review";
+@import "pages/sitemap";
+@import "pages/about";
+@import "pages/bookmaker-offer";
+@import "pages/steps-infomation";
+@import "pages/free-bet";
+@import "pages/football-tips";
+@import "pages/my-profile";
+@import "pages/basket";
+@import "pages/androiddownload";
+@import "pages/wallet";
+@import "pages/behistory";
+@import "pages/bookmakers";
+
+// If IE support is needed
+@import "base/ie";
+
+// For anything quick and dirty that needs thrown in
+@import "base/shame";

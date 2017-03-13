@@ -1,0 +1,245 @@
+/* table home */
+
+.table-main {
+  tr {
+     th {
+        background:#e9ecef;
+        font-size:$font10px;
+        padding:17px 10px !important;
+        border:0px !important;
+        vertical-align: middle !important;
+        letter-spacing:0.20em;
+        @include mobile {
+          padding: 17px 7px !important;
+        }
+    }
+  }
+  > thead > tr {
+    transform:none !important;
+    cursor:inherit !important;
+  }
+  > thead > tr > th {
+    text-align: center;
+  }
+  .thead-tr {
+    transform:none !important;
+    cursor:inherit !important;
+  }
+  > tbody.text-left {
+    tr td {
+      text-align: left;
+    }
+  }
+  > tbody > tr {
+    transition: all .40s ease-in-out;
+    > td {
+      text-align: center;
+      padding: 17px 10px;
+      vertical-align: middle;
+      
+      &.td-border {
+        border-left:1px solid #ddd;
+      }
+      @include mobile {
+        padding: 17px 7px;
+        font-size:$font12px;
+      }
+    }
+    td.name {
+      padding-left: 0;
+      .jersey {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }// .jersey
+      .selection-name {
+        .racecard-number {
+          &:after {
+            content: '|';
+            margin-left: 2px;
+          }
+        }// racecard-number
+      }// .selection-name
+    }// td.name
+    cursor: pointer;
+        -o-transition: all .25s ease-in-out;
+      -ms-transition: all .25s ease-in-out;
+      -moz-transition: all .25s ease-in-out;
+      -webkit-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+    &:hover {
+      color: darken(#23343a, 10%);
+      transform: scale(1.02);
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 0px 20px -30px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow:0px 0px 10px rgba(0, 0, 0, 0.1), 0px 0px 20px -30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 0px 20px -30px rgba(0, 0, 0, 0.1);
+      > td {
+        background: #fff;
+        color: #23343a;
+        
+        .fa {
+          color: #23343a;
+        }
+      }
+      > td .fa {
+        font-size: $font20px;
+        color: #b9c0c7;
+      }
+    }// :hover
+    > td {
+      .fa {
+        font-size: $font20px;
+        color: #b9c0c7;
+        @include tranny;
+      }
+      &:hover {
+        .fa {
+          font-size: $font20px;
+          color: darken(#b9c0c7, 20%);
+        }
+      }
+    }
+  }
+  .a-show-comment {
+    display:inline-block;
+    margin: 0 auto;
+  }
+}
+.table-left {
+  > thead > tr > th {
+    text-align: left;
+  }
+  > tbody > tr > td {
+    text-align: left;
+  }
+}
+.filter-show {
+    display:table;
+    width:100%;
+    background:#7fdde9;
+    position:relative;
+    @include mobile {
+      line-height:16px;
+    }
+    .pull-left {
+      a {
+        display:inline-block;
+        margin-right:10px;
+        color:#fff;
+        padding:4px 10px;
+        @include mobile {
+          padding: 6px 10px;
+          font-size:$font11px;
+          margin:0px;
+        }
+        &.active {
+          color:#23343a;
+        }
+        &:hover {
+          color:#23343a;
+        }
+      }
+    }
+    .pull-right {
+      position:absolute;
+      top:0px;
+      right:0px;
+    }
+    .dropdown {
+      &.datepicker {
+        .dropdown-menu {
+          padding: 0;
+          margin: 0;
+          border: none;
+        }
+      }
+      > a {
+        background:#53bbb0;
+        padding:4px 5px;
+        color:#fff;
+        display: block;
+        padding-right:30px;
+        @include mobile {
+          padding:6px 5px;
+          font-size:$font11px;
+          padding-right: 30px;
+        }
+        i {
+          position:absolute;
+          top:0px;
+          right:0px;
+          padding:7px;
+          background:#4ba59b;
+          @include mobile {
+            padding:8px;
+          }
+        }
+      }
+      .dropdown-menu {
+        width:auto;
+        min-width: 10px;
+        left:auto;
+        right:0px;
+      }
+    }
+    &.hide-desktop {
+      @include mobile {
+        display:table !important;
+      }
+    }
+
+}
+.edit-text {
+  margin-bottom:10px;
+
+}
+.show-field-edit {
+  display:none;
+  textarea {
+    margin-bottom:10px;
+  }
+}
+.table-bets {
+  @include tablet1024 {
+    margin-bottom:20px !important;
+  }
+  tbody {
+    tr {
+      td {
+        padding:0px 0px 0px 10px;
+        @include tablet1024 {
+          padding:7px;
+        }
+        .fa {
+          color:#00bcd3 !important;
+          vertical-align: middle;
+          margin-left:5px;
+        }
+        .btn-outline-green {
+          @include tablet1024 {
+            padding: 7px;
+            min-width: 75px;
+          }
+        }
+      }
+      &:first-child {
+        td {
+          border:0px;
+        }
+      }
+    }
+  }
+}
+.table-nohover {
+  tbody {
+    tr:hover {
+      transform:none;
+      box-shadow:none;
+    }
+  }
+}

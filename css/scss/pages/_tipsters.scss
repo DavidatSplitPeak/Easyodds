@@ -1,0 +1,117 @@
+//**
+// Tipters
+//**
+
+.list-tipsters {
+  li {
+    position:relative;
+    padding:15px;
+    padding-left:130px;
+    min-height:100px;
+    border-bottom:1px solid #f4f4f4;
+    overflow:hidden;
+    .img-tipster {
+      position:absolute;
+      top:0px;
+      left:0px;
+      width:108px;
+      height:108px;
+      overflow:hidden;
+      @include mobile {
+        height:150px;
+        width:112px;
+      }
+      img {
+        width:100%;
+      }
+    }
+    h3 {
+      font-size:$font24px;
+      font-family: 'Francois One', sans-serif;
+      margin:0px;
+      margin-bottom:10px;
+      color:#23343a;
+      font-weight:normal;
+      @include mobile {
+        margin-bottom:5px;
+      }
+    }
+    .bottom-list-tipster {
+      overflow:hidden;
+      line-height:15px;
+      .pull-left {
+        @include mobile {
+          float:none !important;
+          margin-bottom:10px;
+        }
+      }
+      .pull-right {
+        @include mobile {
+          float:none !important;
+        }
+      }
+      em {
+          font-size:$font11px;
+          @include mobile {
+            display:none;
+          }
+      }
+        
+      .btn-grey {
+        padding:8px 25px;
+        @include mobile {
+           padding:8px;
+           display:block;
+           font-size:12px;
+        }
+      }
+      &.active em{
+        @include mobile {
+          display:block;    
+        }
+      }
+    }
+    
+  .description-tipster {
+    margin-bottom:20px;
+    display:none;
+  }
+  .click-description-tipster {
+    position:absolute;
+    top:10px;
+    right:15px;
+    cursor:pointer;
+  }
+  .social-tipster {
+    position:absolute;
+    top:120px;
+    left:0px;
+    width:107px;
+    text-align:center;
+    display:none;
+    @include mobile {
+      top:165px;
+      width:112px;
+    }
+    a {
+      display:inline-block;
+      margin:0px 5px;
+      width:30px;
+      height:30px;
+      line-height:30px;
+      border-radius:50%;
+      font-size:$font15px;
+      border:1px solid #00bcd3;
+      color:#00bcd3;
+      &:hover {
+        opacity:0.7;
+      }
+    }
+  }
+  }
+}
+.text-tipster {
+  @include mobile {
+    padding:0px 15px;
+  }
+}

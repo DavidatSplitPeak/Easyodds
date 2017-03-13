@@ -1,0 +1,44 @@
+/*
+Error: Invalid CSS after "...stop(100%,#fff)": expected ";", was "); /* Chrome,Sa..."
+        on line 4 of /Users/atotalpirate/Sites/_static/easyodds/css/scss/vendor/ui-datepicker.scss
+
+1: .ui-datepicker {
+2: background: #fff; /* Old browsers *\/
+3: background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ *\/
+4: background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc)), color-stop(100%,#fff)); /* Chrome,Safari4+ *\/
+5: background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Chrome10+,Safari5.1+ *\/
+6: background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Opera11.10+ *\/
+7: background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* IE10+ *\/
+8: background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%); /* W3C *\/
+9: font-size:11px;
+
+Backtrace:
+/Users/atotalpirate/Sites/_static/easyodds/css/scss/vendor/ui-datepicker.scss:4
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1161:in `expected'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1097:in `expected'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1092:in `tok!'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:757:in `block in try_declaration'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1137:in `call'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:1137:in `rethrow'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:762:in `try_declaration'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:692:in `declaration_or_ruleset'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:657:in `block_child'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:649:in `block_contents'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:638:in `block'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:631:in `ruleset'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:656:in `block_child'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:646:in `block_contents'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/scss/parser.rb:42:in `parse'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/engine.rb:403:in `_to_tree'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/engine.rb:278:in `render'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:420:in `run'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:52:in `parse'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/CodeKit 2.app/Contents/Resources/engines/scss/bin/scss:13:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...stop(100%,#fff)\": expected \";\", was \"); /* Chrome,Sa...\"\A         on line 4 of /Users/atotalpirate/Sites/_static/easyodds/css/scss/vendor/ui-datepicker.scss\A \A 1: .ui-datepicker {\A 2: background: #fff; /* Old browsers */\A 3: background: #fff -moz-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* FF3.6+ */\A 4: background: #fff -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc)), color-stop(100%,#fff)); /* Chrome,Safari4+ */\A 5: background: #fff -webkit-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Chrome10+,Safari5.1+ */\A 6: background: #fff -o-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* Opera11.10+ */\A 7: background: #fff -ms-linear-gradient(top, #fcfcfc 0%, #fff 100%); /* IE10+ */\A 8: background: #fff linear-gradient(top, #fcfcfc 0%, #fff 100%); /* W3C */\A 9: font-size:11px;"; }

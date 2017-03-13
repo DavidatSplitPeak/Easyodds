@@ -1,0 +1,127 @@
+//**
+// Responsive Styles
+//**
+
+
+// Mobile Device Widths
+$mobile-320: 320px; // iPhones 3/4(s)/5(s), Galaxy S(II/Plus), Lumia 520-900, Droid, Nexus S, Alcatel One Touch Ultra 995, HTC Desire/Evo
+$mobile-360: 360px; // Galaxy SIV, HTCOne, Sony Xperia, Galaxy SIII/Nexus/Note II, Blackberry Q10, Alcatel One Touch Idol Ultra, Droix Razr/ Razr Maxx/3&4
+$mobile-375: 375px; // iPhone 6
+$mobile-384: 384px; // Nexus 4, Nokia Lumia 925/1020/920, Blackberry Z10
+$mobile-400: 400px; // Galaxy Note
+$mobile-414: 414px; // iPhone 6s
+
+// Tablets
+$tablet-533: 533px; // Galaxy Tab 10.1, Kindle Fire HD
+$tablet-600: 600px; // Nexus 7, Galaxy Tab 1/2, Kindle Fire 1st Gen
+$tablet-768: 768px; // iPad, Acer Picasso
+$tablet-800: 800px; // Nexus 10, Kindle Fire HD
+$tablet-853: 853px; // Xoom
+$tablet-1024: 1024px; // Novo Spark
+$tablet-1280: 1280px; // Surface Pro
+$tablet-1366: 1366px; // Surface
+
+// Laptops
+$laptop-1366: 1366px; // Chromebooks, Old MBA
+$laptop-1440: 1440px; // mobile-up
+$laptop-1680: 1680px; // Retina MBP
+
+// Desktops
+$desktop-1920: 1920px; // Most 21-24" monitors
+$desktop-2560: 2560px; // High res 24" +
+
+// KEY VARIABLE LIST
+$mobile: 414px;
+$smalltablet: $tablet-768;
+$tablet: $tablet-1024;
+$laptop: $laptop-1680;
+$desktop: $desktop-2560;
+$mobile535: 535px;
+$mobile768: $tablet-768;
+$tablet1280: $tablet-1280;
+@mixin mobile {
+  // From 0 to $mobile
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin mobile768 {
+  // From 0 to $mobile
+  @media screen and (max-width: #{$mobile768 - 1px}) {
+    @content;
+  }
+}
+// Only use $media-up mixins when the change is meant to exist across all
+// screen sizes beyond it's name's breakpoint
+
+    @mixin tablet-up {
+      // $tablet and up
+      // Covers everything after the mobile breakpoint
+      @media (min-width: #{$mobile})  {
+        @content;
+      }
+    }
+
+@mixin tablet {
+  // Start 414px ($mobile) and end at 1024px ($tablet)
+  @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+
+// Only use $media-up mixins when the change is meant to exist across all
+// screen sizes beyond it's name's breakpoint
+
+    @mixin laptop-up {
+      // Start at 1024px ($tablet)
+      @media (min-width: #{$tablet}) {
+        @content;
+      }
+    }
+
+ @mixin laptop-down {
+      // Start 1024px ($mobile) and end at 1280 ($tablet)
+      @media (min-width: #{$tablet}) and (max-width: #{$tablet-1280}) {
+        @content;
+      }
+  }
+
+@mixin laptop {
+  // Start 1024px ($mobile) and end at 1680px ($laptop)
+  @media (min-width: #{$tablet}) and (max-width: #{$laptop - 1px}) {
+    @content;
+  }
+}
+@mixin desktop-up {
+  // Start at 1440px
+      @media (min-width: #{$laptop-1440}) {
+        @content;
+      }
+}
+@mixin desktop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin desktopsm {
+  @media (max-width: #{$tablet1280}) {
+    @content;
+  }
+}
+@mixin tablet1024 {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin mintablet1280 {
+  @media (min-width: #{$tablet1280}) {
+    @content;
+  }
+}
+
+@mixin mobile535 {
+      @media (max-width: #{$mobile535})  {
+        @content;
+      }
+  }

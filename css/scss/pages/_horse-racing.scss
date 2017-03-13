@@ -1,0 +1,215 @@
+//**
+// Horse Racing
+//**
+
+.title-racing {
+  padding:30px 20px;
+  padding-left:10px;
+  color:#23343a;
+  font-size: $font28px;
+  font-family: 'Francois One', sans-serif;
+  font-weight:normal;
+  @include laptop-down {
+    font-size: $font22px;
+  }
+  @include tablet {
+    font-size: $font22px;
+  }
+  @include mobile {
+    font-size:$font22px;
+    padding:15px;
+  }
+}
+.menu-racing {
+  border:1px solid #bcbec0;
+  overflow:hidden;
+  border-radius:4px;
+  margin-bottom:30px;
+  display:inline-block;
+  @include mobile535 {
+    display:block;
+    overflow:auto;
+    margin-bottom:20px;
+    position:relative;
+  }
+  ul {
+    li {
+      float:left;
+      a {
+        display:block;
+        padding:10px 20px;
+        border-left:1px solid #bcbec0;
+        color:#5accbc;
+        @include desktopsm {
+          padding:10px;
+          font-size:$font12px;
+        }
+        &:hover {
+          color:#00bcd3;
+        }
+      }
+      &:first-child {
+        a {
+          border:0px;
+        }
+      }
+      &.active {
+        a {
+          background:#00bcd3;
+          color:#fff;
+        }
+      }
+
+    }
+  }
+}
+.menu-racing-show {
+  @include mobile535 {
+    display:none;
+    ul {
+      li {
+        float:none;
+        a {
+          border:0px;
+          border-bottom: 1px solid #bcbec0;
+        }
+      }
+    }
+    .close-menu-racing {
+      display: block;
+      position: absolute;
+      top: 3px;
+      right: 2px;
+      font-size: $font25px;
+      color: #7fdde9;
+      padding: 0px 10px 10px;
+    }
+  }
+}
+.menu-racing-desktop {
+
+  width:100%;
+  ul {
+    display:table;
+    width:100%;
+    li {
+      float:none;
+      display:table-cell;
+      text-align:center;
+      a {
+        @include tablet-up {
+          padding:10px 5px;
+        }
+
+      }
+    }
+  }
+}
+.menu-racing-show1 {
+  display:none;
+  position:relative;
+  ul {
+    li {
+        float:none;
+        a {
+          border:0px;
+          border-bottom: 1px solid #bcbec0;
+        }
+      }
+  }
+  .close-menu-racing {
+      display: block;
+      position: absolute;
+      top: 3px;
+      right: 2px;
+      font-size: $font25px;
+      color: #7fdde9;
+      padding: 0px 10px 10px;
+    }
+}
+.menu-racing-hide {
+  display:none;
+
+  @include mobile535 {
+    display:block;
+    ul {
+      display:table;
+      width:100%;
+      li {
+        display:table-cell;
+        float:none;
+        text-align:center;
+        &.showall-tab {
+          a {
+            padding:16px 10px;
+            font-size:$font25px;
+            span {
+              display:block;
+              margin-top:-12px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+.close-menu-racing {
+  display:none;
+}
+.title-search {
+  position:relative;
+  line-height:20px;
+  display:table;
+  width:100%;
+  @include mobile {
+    padding:15px;
+  }
+  .right-title-racing {
+    font-family: 'Lato', sans-serif;
+    width:50%;
+    font-size:13px;
+    color:#77797a;
+    float:right;
+    @include mobile768 {
+        position:relative;
+        top:0px;
+        right:0px;
+        width:100%;
+        margin-top:10px;
+    }
+    .search-top {
+      margin:0px;
+    }
+  }
+}
+.set-horse-alert {
+  position:relative;
+  padding-right:150px;
+  &.search-top {
+      form {
+        border:0px;
+        padding:0px;
+        position: initial;
+      }
+      .form-control {
+        border: 1px solid #efefef;
+      }
+  }
+  .btn {
+    position:absolute;
+    top:0px;
+    right:0px;
+  }
+}
+.hea-result {
+  text-align:right;
+  font-size:$font12px;
+  line-height:18px;
+  letter-spacing:1px;
+  @include mobile768 {
+    text-align:left;
+    font-size:$font11px;
+    letter-spacing:0px;
+  }
+}

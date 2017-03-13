@@ -1,0 +1,249 @@
+//**
+// Sign Up
+//**
+.row-sign {
+  background:#23343a;
+  .col-md-5, .col-md-7 {
+    @include tablet {
+      width:auto;
+      float:none;
+    }
+  }
+}
+.sign-page {
+    @include mobile {
+      padding-top:0px;
+    }
+    @include tablet {
+      padding-top:0px;
+    }
+  }
+.right-sign {
+  padding:73px 0px 0px 106px;
+  background:#f4f4f4;
+  position:relative;
+  font-size: $font18px;
+  color:#23343a;
+  min-height:584px;
+  @include mobile {
+    padding:20px;
+    font-size:$font16px;
+    min-height:10px !important;
+  }
+  @include tablet {
+    padding:30px;
+    font-size:$font16px;
+    min-height:10px !important;
+  }
+  h2 {
+    font-family: 'Francois One', sans-serif;
+    margin-top:0px;
+    margin-bottom:40px;
+    font-size: $font34px;
+    color:#00bcd3;
+    font-weight:normal;
+    @include mobile {
+      font-size:$font28px;
+    }
+  }
+  ul {
+    li {
+      padding-bottom:30px;
+      text-align:left;
+      img {
+        width:45px;
+        margin-right:30px;
+        @include mobile {
+          width:35px;
+        }
+      }
+      display:table;
+      width:100%;
+    }
+    .left-img-sign {
+      display:table-cell;
+      vertical-align:middle;
+      width:50px;
+    }
+    .right-text-sign {
+      display:table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+.form-sign {
+  position:relative;
+  padding:50px 30px 0px 30px;
+  @include laptop-up {
+    padding:80px;
+  }
+  @include desktopsm {
+    padding:70px 50px;
+    padding-bottom:30px;
+  }
+  @include mobile {
+    padding:50px 20px 0px 20px;
+    padding-bottom:30px;
+  }
+
+  .phone-sign {
+    display:none;
+    @include mobile {
+      position:absolute;
+      top:20px;
+      right:20px;
+      color:#fff;
+      display:block;
+    }
+    @include tablet {
+      position:absolute;
+      top:15px;
+      right:15px;
+      color:#fff;
+      display:block;
+    }
+  }
+  form {
+    color:#fff;
+    @include tablet {
+      width:300px;
+      margin:auto;
+    }
+  }
+  h2 {
+    font-family: 'Francois One', sans-serif;
+    margin-top:0px;
+    margin-bottom:40px;
+    font-size: $font34px;
+    font-weight:normal;
+    color:#fff;
+    @include mobile {
+      font-size:$font28px;
+      margin-top:20px;
+    }
+  }
+  .btn {
+    padding: 15px 0px ;
+  }
+  .btn-login {
+    border:2px solid #fff;
+    background:none;
+    color:#fff;
+    padding:14px 0px;
+    font-weight:700;
+    i {
+      font-size: $font18px;
+      margin-right:5px;
+    }
+    &:hover, &:focus {
+      background:#fff;
+      color:#23343a;
+    }
+  }
+  p {
+    margin-bottom:5px;
+  }
+  .form-control {
+    height:40px;
+  }
+  .logo {
+    position:absolute;
+    top: 10px;
+    left: 20px;
+    display:none;
+    @include tablet {
+      display:block;
+    }
+    @include mobile {
+      display:block;
+      img {
+        height:38px;
+      }
+    }
+    a {
+      border:0px;
+      width:auto;
+      padding:0px;
+      font-size:$font21px;
+      span {
+        color:#fff !important;
+      }
+    }
+  }
+}
+.row-button-sign {
+  margin:0px -30px;
+  margin-top:20px;
+  position:relative;
+  @include mobile {
+    margin-bottom:30px;
+  }
+  @include tablet {
+    margin-bottom:30px;
+  }
+  .col-xs-6 {
+    padding:0px 30px;
+  }
+  .or-sign {
+    position:absolute;
+    top:15px;
+    left:50%;
+    margin-left:-5px;
+  }
+}
+
+
+label {
+  font-weight:normal;
+}
+.checkbox-sign {
+  .checkbox-l {
+    margin:5px 0px;
+  }
+}
+ .faq-sign {
+    position:absolute;
+    bottom:15px;
+    right:15px;
+
+    img {
+      width:30px;
+      -o-transition: all .40s ease-in-out;
+      -ms-transition: all .40s ease-in-out;
+      -moz-transition: all .40s ease-in-out;
+      -webkit-transition: all .40s ease-in-out;
+      transition: all .40s ease-in-out;
+    }
+    &:hover img{
+        -ms-transform: scale(1.02, 1.02);
+        -webkit-transform: scale(1.02, 1.02);
+        transform: scale(1.2, 1.2);
+      }
+  }
+.sign-alert {
+  padding: 10px 133px;
+  background:#cecece;
+  color:#333;
+  font-size:$font16px;
+  display:none;
+  @include desktopsm {
+    padding:10px 50px;
+  }
+  @include mobile {
+    padding:10px 30px;
+    padding-left:60px;
+    font-size:$font13px;
+    line-height:18px;
+  }
+
+  > div {
+    position:relative;
+  }
+  img {
+    position:absolute;
+    top:50%;
+    left:-40px;
+    margin-top:-14px;
+    width:28px;
+  }
+}

@@ -1,0 +1,122 @@
+//**
+// free bet
+//**
+
+.banner-free-bet {
+  padding:30px;
+  background-image:url(../images/bg-free-bet.jpg);
+  background-position: top center; 
+  color:#fff;
+  @include mobile {
+    padding:30px 70px;
+  }
+  .btn {
+    padding:22px 20px;
+    font-size:$font20px;
+    @include mobile {
+      margin-top:10px;
+      padding:15px;
+      font-size:$font18px;
+    }
+  }
+}
+.row-free-bet {
+  margin:0px -2px;
+  background:#dfdfdf;  .col-sm-4 {
+    padding:0px 2px;
+  }
+  .box-free-bet {
+    margin-top:4px;
+    text-align:center;
+    background:#fff;
+    -o-transition: all .40s ease-in-out;
+    -ms-transition: all .40s ease-in-out;
+    -moz-transition: all .40s ease-in-out;
+    -webkit-transition: all .40s ease-in-out;
+    transition: all .40s ease-in-out;
+    position:relative;
+    &:hover {
+      box-shadow: 0px 0px 20px 6px rgba(0,0,0,0.2);
+      z-index:10;
+    }
+    .text-box-free-bet {
+      padding:20px;
+      @include mobile {
+        padding:20px 70px;
+      }
+    }
+    .logo-free-bet {
+      padding:15px 10px;
+      background:#4b3a48;
+      @include mobile {
+        text-align:left;
+      }
+      img {
+        height:25px;
+      }
+    }
+    .easyodds-rating {
+      color:#b9c0c7;
+      @include mobile {
+        margin-bottom:10px;
+      }
+      span {
+        color:#333;
+        font-size:$font15px;
+        display:inline-block;
+        font-weight:bold;
+        margin-left:10px;
+      }
+      i {
+        color:#feca10;
+        margin-left:3px;
+        @include mobile {
+          font-size:$font10px;
+          margin-left:0px;
+        }
+      }
+    }
+    .price-free-bet {
+      padding:30px 0px;
+      color:#4b3a48;
+      font-weight:bold;
+      font-size:12px;
+      @include mobile {
+        padding:0px;
+        position:absolute;
+        top:8px;
+        right:10px;
+        text-align:right;
+        color:#fff;
+        font-size:9px;
+      }
+      h3 {
+        margin-top:0px;
+        font-size:$font20px;
+        @include laptop-up {
+          font-size:$font25px;
+          
+        }
+        @include laptop-down {
+          font-size:$font20px;
+        }
+        @include mobile {
+          font-size:$font17px;
+          color:#fff;
+        }
+      }
+    }
+    .read-review {
+      color:#b9c0c7;
+      font-size:$font15px;
+      margin-bottom:10px;
+      display:inline-block;
+    }
+    .btn {
+      @include laptop-up {
+        font-size:$font20px;
+      }
+      padding:15px;
+    }
+  }
+}

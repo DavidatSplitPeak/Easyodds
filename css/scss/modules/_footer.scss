@@ -1,0 +1,131 @@
+//**
+// footer
+//**
+
+
+.footer {
+  background: #332932;
+  color: #fff;
+  padding: 40px 0px;
+  font-size: $font10px;
+  @include laptop-up {
+    margin-top:60px;
+  }
+  .row-main {
+    .col-sm-3 {
+      width: 17%;
+      float: left;
+      @include mobile768 {
+        width: 100%;
+        float: none;
+      }
+    }
+    >.col-sm-6 {
+      width: 66%;
+      float: left;
+      @include mobile768 {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+  @include mobile768 {
+    text-align: center;
+    padding: 30px 0px;
+  }
+  a {
+    color: #b9c0c7;
+    &:hover {
+      color:#fff;
+    }
+  }
+  .logo {
+    a {
+    border: 0px;
+    margin-top: 115px;
+    padding-bottom: 0px;
+    @include mobile768 {
+        margin-top: 0px;
+        padding-top: 0px;
+        border-bottom: 2px solid #b9c0c7;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .copy {
+    margin-top: 145px;
+    color: #b9c0c7;
+    @include tablet {
+      margin-top: 140px;
+      line-height:13px;
+    }
+    @include mobile768 {
+      margin-top: 30px;
+    }
+    
+  }
+  .logo span {
+    color: #fff !important;
+  }
+  .socail-footer {
+    h4 {
+      font-weight: normal;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    ul li {
+      display: inline-block;
+      margin: 0px 10px;
+      a {
+        display: block;
+        width: 35px;
+        height: 35px;
+        line-height: 30px;
+        font-size: $font15px;
+        text-align: center;
+        border: 2px solid #7e6682;
+        border-radius: 50%;
+        color:#fff;
+        &:hover {
+          color:#00bcd3;
+        }
+      }
+      
+    }
+  }
+  .menu-footer {
+    border-top: 2px solid #b9c0c7;
+    padding-top: 30px;
+    margin-top: 30px;
+    &.hide-mobile {
+      display: inline-block !important;
+      @include mobile768 {
+        display: none !important;
+      }
+    }
+    &.hide-desktop {
+      display: none !important;
+      @include mobile768 {
+        display: block !important;
+      }
+    }
+    @include mobile768 {
+      margin: 0px;
+      padding: 0px 10px;
+      border: 0px;
+      border-bottom: 2px solid #b9c0c7;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      line-height:30px;
+    }
+ 
+    a {
+      display: inline-block;
+      margin-right: 20px;
+      &:last-child {
+        margin: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"> <!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+	<title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+	<!-- Web Font / @font-face : BEGIN -->
+	<!-- NOTE: If web fonts are not required, lines 9 - 26 can be safely removed. -->
+	
+	<!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+	<!--[if mso]>
+		<style>
+			* {
+				font-family: sans-serif !important;
+			}
+		</style>
+	<![endif]-->
+	
+	<!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+	<!--[if !mso]><!-->
+		<!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+	<!--<![endif]-->
+
+	<!-- Web Font / @font-face : END -->
+	
+	<!-- CSS Reset -->
+    <style>
+
+		/* What it does: Remove spaces around the email design added by some email clients. */
+		/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+	        margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+        
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        
+        /* What is does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin:0 !important;
+        }
+        
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+                
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto; 
+        }
+        
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+        
+        /* What it does: A work-around for iOS meddling in triggered links. */
+        .mobile-link--footer a,
+        a[x-apple-data-detectors] {
+            color:inherit !important;
+            text-decoration: underline !important;
+        }
+      
+    </style>
+    
+    <!-- Progressive Enhancements -->
+    <style>
+        
+        /* What it does: Hover styles for buttons */
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+        .button-td:hover,
+        .button-a:hover {
+            background: #78797b !important;
+            border-color: #78797b !important;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+
+            /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+            .fluid {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            /* What it does: Forces table cells into full-width rows. */
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+            /* And center justify these ones. */
+            .stack-column-center {
+                text-align: center !important;
+            }
+        
+            /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+                
+        }
+
+    </style>
+
+</head>
+<body bgcolor="#f3f4f4" width="100%" style="margin: 0;">
+    <center style="width: 100%; background: #f3f4f4; font-family: 'lato', Helvetica, Arial, Serif;">
+
+        <!-- Email Header : BEGIN -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+			<tr>
+				<td style="padding: 20px 0; text-align: center">
+                    <h2 style="font-size:41px;margin:0px;color:#62bbd5; font-weight:900">THE WEEKENDER</h2>
+                    <div style="color:#62bbd5; font-weight:900;font-size:21px;">BY</div>
+				</td>
+			</tr>
+        </table>
+        <!-- Email Header : END -->
+
+        <!-- Email logo : BEGIN -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+            <tr>
+                <td style="text-align: center">
+                    <div style="background: #373144;padding:10px 0px;color:#78797b;font-size:22px;"">EASY <span style="color:#fff; font-weight:700;">ODDS</span></div>
+                </td>
+            </tr>
+        </table>
+        <!-- Email logo : END -->
+        <!-- Hero Image, Flush : BEGIN -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+            <tr>
+                <td background="http://html.hoanvusolutions.com/easyodds1/images/slider.jpg" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;" width="600" height="222">
+
+                </td>
+            </tr>
+        </table>
+        <!-- Hero Image, Flush : END -->
+        <!-- Email Body : BEGIN -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container">
+            
+            <!-- 1 Column Text : BEGIN -->
+            <tr>
+                <td style="padding: 20px 30px 50px 30px; text-align: center; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #78797b;">
+                    <h3 style="font-size:24px;margin:0px;color:#28343b; font-weight:900; border-bottom:1px solid #ddd;padding-bottom:15px; margin-bottom:15px">THE PREMIERE LEAGUE IS BACK!</h3>
+                    Ross Casey offers his Premier League tips ahead of the opening weekend.<br>
+                    Jake Johns looks to add to his 20/1 winner in midweek!
+                </td>
+            </tr>
+            <!-- 1 Column Text : BEGIN -->
+           
+            <!-- 2 Even Columns : BEGIN -->
+            <tr>
+                <td align="center" valign="top" style="padding: 30px">
+                    <h3 style="font-size:20px;margin:0px;color:#28343b; font-weight:900; border-bottom:1px solid #ddd;padding-bottom:15px; margin-bottom:15px">Our Weekend Highlights</h3>
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1) !important; margin-bottom:5px !important;background:#fff">
+                        <tr>
+                            <!-- Column : BEGIN -->
+                            <td width="45%" class="stack-column-center">
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top">
+                                            <img src="http://html.hoanvusolutions.com/easyodds1/images/img.jpg" width="100%" alt="alt_text" border="0" class="center-on-narrow" style="background: #dddddd; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #78797b;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                            <!-- Column : BEGIN -->
+                            <td width="55%" class="stack-column-center">
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top" style="font-size: 13px; mso-height-rule: exactly; line-height: 20px; color: #78797b; padding: 10px 15px 10px 15px; text-align: left;" class="center-on-narrow">
+                                            OFFER - Get yourself Chelsea 6/1 or West Ham 8/1 to win this Monday's derby match.
+                                            <br><br>
+                                            <!-- Button : Begin -->
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                <tr>
+                                                    <td style="border-radius: 3px;text-align: center; padding:0px 40px">
+                                                        <a href="http://www.google.com" style="background: #bbc0c7; font-size: 15px;padding:10px;text-align: center; text-decoration: none; display:block; border-radius: 3px; font-weight: bold;" class="button-a"><span style="color:#ffffff">CLAIM NOW</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!-- Button : END -->    
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                        </tr>
+                    </table>
+
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1) !important; margin-bottom:5px !important;;background:#fff">
+                        <tr>
+                            <!-- Column : BEGIN -->
+                            <td width="45%" class="stack-column-center">
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top">
+                                            <img src="http://html.hoanvusolutions.com/easyodds1/images/img.jpg" width="100%" alt="alt_text" border="0" class="center-on-narrow" style="background: #dddddd; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #78797b;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                            <!-- Column : BEGIN -->
+                            <td width="55%" class="stack-column-center">
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top" style="font-size: 13px; mso-height-rule: exactly; line-height: 20px; color: #78797b; padding: 10px 15px 10px 15px; text-align: left;" class="center-on-narrow">
+                                            OFFER - Get yourself Chelsea 6/1 or West Ham 8/1 to win this Monday's derby match.
+                                            <br><br>
+                                            <!-- Button : Begin -->
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                <tr>
+                                                    <td style="border-radius: 3px;text-align: center; padding:0px 40px">
+                                                        <a href="http://www.google.com" style="background: #bbc0c7; font-size: 15px;padding:10px;text-align: center; text-decoration: none; display:block; border-radius: 3px; font-weight: bold;" class="button-a"><span style="color:#ffffff">CLAIM NOW</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!-- Button : END -->    
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                        </tr>
+                    </table>
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1) !important; margin-bottom:5px !important;;background:#fff">
+                        <tr>
+                            <!-- Column : BEGIN -->
+                            <td width="45%" class="stack-column-center">
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top">
+                                            <img src="http://html.hoanvusolutions.com/easyodds1/images/img.jpg" width="100%" alt="alt_text" border="0" class="center-on-narrow" style="background: #dddddd; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #78797b;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                            <!-- Column : BEGIN -->
+                            <td width="55%" class="stack-column-center" >
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" >
+                                    <tr>
+                                        <td dir="ltr" valign="top" style="font-size: 13px; mso-height-rule: exactly; line-height: 20px; color: #78797b; padding: 10px 15px 10px 15px; text-align: left;" class="center-on-narrow">
+                                            OFFER - Get yourself Chelsea 6/1 or West Ham 8/1 to win this Monday's derby match.
+                                            <br><br>
+                                            <!-- Button : Begin -->
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                <tr>
+                                                    <td style="border-radius: 3px;text-align: center; padding:0px 40px">
+                                                        <a href="http://www.google.com" style="background: #bbc0c7; font-size: 15px;padding:10px;text-align: center; text-decoration: none; display:block; border-radius: 3px; font-weight: bold;" class="button-a"><span style="color:#ffffff">CLAIM NOW</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <!-- Button : END -->    
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center" valign="top" style="padding: 30px">
+                    <h3 style="font-size:20px;margin:0px;color:#28343b; font-weight:900; border-bottom:1px solid #ddd;padding-bottom:15px; margin-bottom:15px">Why Not Enjoy These Partner Oﬀers This Weekend?</h3>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <!-- Column : BEGIN -->
+                            <td width="33.33%" class="stack-column-center" style=" padding:0px 2px;">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1) !important; margin-bottom:5px !important; margin:0px 2px;background:#fff">
+                                        <tr>
+                                            <td style="padding: 10px; background: #483a49; text-align: center">
+                                               <img src="http://html.hoanvusolutions.com/easyodds1/images/logo-img7.png" style="height:20px">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; text-align: center">
+                                                <div style="height:50px; color:#483a49;font-weight:bold">
+                                                    <h3 style="margin-bottom:0px;">5/1 ANY GOAL</h3>
+                                                    <p style="font-size:12px;margin:0px;">BEFORE 5PM </p>
+                                                </div>
+                                                <div style="margin-bottom:20px; color:#78797b; font-size:13px">
+                                                    Coral are offering a crazy oﬀer for the opening day of the Premier League season...
+                                                </div>
+                                                <!-- Button : Begin -->
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="border-radius: 3px;text-align: center">
+                                                            <a href="http://www.google.com" style="background: #bbc0c7; font-size: 15px;padding:10px;text-align: center; text-decoration: none; display:block; border-radius: 3px; font-weight: bold;" class="button-a"><span style="color:#ffffff">CLAIM NOW</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- Button : END --> 
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                            <td width="33.33%" class="stack-column-center" style=" padding:0px 2px;">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1) !important; margin-bottom:5px !important;background:#fff">
+                                        <tr>
+                                            <td style="padding: 10px; background: #483a49; text-align: center">
+                                               <img src="http://html.hoanvusolutions.com/easyodds1/images/logo-img7.png" style="height:20px">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; text-align: center">
+                                                <div style="height:50px; color:#483a49;font-weight:bold">
+                                                    <h3 style="margin-bottom:0px;">£50 FREE BET</h3>
+                                                </div>
+                                                <div style="margin-bottom:20px; color:#78797b; font-size:13px">
+                                                    Join Sportingbet this
+                                                    weekend and claim a free
+                                                    £50 free bet to use on the
+                                                    opening day!
+                                                </div>
+                                                <!-- Button : Begin -->
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="border-radius: 3px;text-align: center">
+                                                            <a href="http://www.google.com" style="background: #bbc0c7; font-size: 15px;padding:10px;text-align: center; text-decoration: none; display:block; border-radius: 3px; font-weight: bold;" class="button-a"><span style="color:#ffffff">CLAIM NOW</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- Button : END --> 
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                            <td width="33.33%" class="stack-column-center" style=" padding:0px 2px;">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"  style="box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1) !important; margin-bottom:5px !important;background:#fff">
+                                        <tr>
+                                            <td style="padding: 10px; background: #483a49; text-align: center">
+                                               <img src="http://html.hoanvusolutions.com/easyodds1/images/logo-img7.png" style="height:20px">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; text-align: center">
+                                                <div style="height:50px; color:#483a49;font-weight:bold">
+                                                    <h3 style="margin-bottom:0px;">14/1 MAN UTD</h3>
+                                                </div>
+                                                <div style="margin-bottom:20px; color:#78797b; font-size:13px">
+                                                    Man Utd have spent big this
+                                                    summer and Paddy Power
+                                                    are offering 14/1 they win
+                                                    the title!
+                                                </div>
+                                                <!-- Button : Begin -->
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td style="border-radius: 3px;text-align: center">
+                                                            <a href="http://www.google.com" style="background: #bbc0c7; font-size: 15px;padding:10px;text-align: center; text-decoration: none; display:block; border-radius: 3px; font-weight: bold;" class="button-a"><span style="color:#ffffff">CLAIM NOW</span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- Button : END --> 
+                                            </td>
+                                        </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                         </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center" valign="top" style="padding: 30px">
+                    <h3 style="font-size:20px;margin:0px;color:#28343b; font-weight:900; border-bottom:1px solid #ddd;padding-bottom:15px; margin-bottom:15px">Check Out These Highlights From Our Editorial Team This Weekend.</h3>
+
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1) !important; margin-bottom:5px !important;background:#fff">
+                        <tr>
+                            <!-- Column : BEGIN -->
+                            <td >
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="margin: auto;" class="email-container">
+                                    <tbody><tr>
+                                        <td background="http://html.hoanvusolutions.com/easyodds1/images/slider.jpg" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;" width="100%" height="150">
+
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top" style="font-size: 13px; mso-height-rule: exactly; line-height: 20px; color: #78797b; padding: 10px 15px 10px 15px; text-align: left;" class="center-on-narrow">
+                                            <h4 style="font-size:16px;color:#28343b; font-weight:700;margin:10px 0px 10px 0px">Andy Murray 5/4 To Win SPOTY</h4>
+                                            The Sports Personality of the Year is one of the big betting markets of the year
+                                            in the specials column and Ross Casey guides you through the latest SPOTY
+                                            odds. Which British athlete will follow in the footsteps of ...   
+                                            <div style="text-align:right"><a href="#" style="color:#62bbd5;text-decoration: none;">READ MORE ></a></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                        </tr>
+                    </table>
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.1) !important; margin-bottom:5px !important;background:#fff">
+                        <tr>
+                            <!-- Column : BEGIN -->
+                            <td >
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="margin: auto;" class="email-container">
+                                    <tbody><tr>
+                                        <td background="http://html.hoanvusolutions.com/easyodds1/images/slider.jpg" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;" width="100%" height="150">
+
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                                <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                        <td dir="ltr" valign="top" style="font-size: 13px; mso-height-rule: exactly; line-height: 20px; color: #78797b; padding: 10px 15px 10px 15px; text-align: left;" class="center-on-narrow">
+                                            <h4 style="font-size:16px;color:#28343b; font-weight:700;margin:10px 0px 10px 0px">Andy Murray 5/4 To Win SPOTY</h4>
+                                            The Sports Personality of the Year is one of the big betting markets of the year
+                                            in the specials column and Ross Casey guides you through the latest SPOTY
+                                            odds. Which British athlete will follow in the footsteps of ...   
+                                            <div style="text-align:right"><a href="#" style="color:#62bbd5;text-decoration: none;">READ MORE ></a></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <!-- Column : END -->
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+
+        </table>
+        <!-- Email Body : END -->
+          
+        <!-- Email Footer : BEGIN -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto;" class="email-container" bgcolor="#373144">
+            <tr>
+                <td style="padding: 10px;width: 100%;font-size: 13px; mso-height-rule: exactly; line-height:18px; color:#fff; text-align:center">
+                    <div style="text-align:center; margin-bottom:5px">
+                        <a href="#" style="display:inline-block; margin:0px 5px"><img src="http://html.hoanvusolutions.com/easyodds1/images/email-so.png" width="35"></a>
+                        <a href="#" style="display:inline-block; margin:0px 5px"><img src="http://html.hoanvusolutions.com/easyodds1/images/email-so2.png" width="35"></a>
+                        <a href="#" style="display:inline-block; margin:0px 5px"><img src="http://html.hoanvusolutions.com/easyodds1/images/email-so2.png" width="35"></a>
+                        <a href="#" style="display:inline-block; margin:0px 5px"><img src="http://html.hoanvusolutions.com/easyodds1/images/email-so3.png" width="35"></a>
+                    </div>
+                    Copyright 2016 EasyOdds.com Limited
+                </td>
+            </tr>
+        </table>
+        <!-- Email Footer : END -->
+
+    </center>
+</body>
+</html>
+

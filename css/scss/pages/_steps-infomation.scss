@@ -1,0 +1,160 @@
+//**
+// all steps infomation
+//**
+
+
+.step-title {
+  color:#23343a;
+  font-size:$font16px;
+  font-weight:700;
+}
+.line-step {
+  background:#e5e5e5;
+  height:8px;
+  > div {
+    background:#cecece;
+    height:8px;
+    border-radius:0px 20px 20px 0px;
+    &.step1 {
+      width:25%;
+    }
+    &.step2 {
+      width:50%;
+    }
+    &.step3 {
+      width:75%;
+    }
+  }
+}
+.content-step {
+  padding:30px;
+  background:#eceff1;
+  @include mobile {
+    position:relative;
+    padding-top:50px;
+  }
+  h4, h3 {
+    font-weight:300;
+    color:#23343a;
+    margin-bottom:20px;
+  }
+  .faq-sign {
+    left:15px;
+    right: inherit;
+     @include mobile768 {
+      top: 10px;
+      bottom: inherit;
+      right: 15px;
+      left: inherit;
+    }
+  }
+  .form-group {
+      label {
+        font-weight: bold;
+        font-size: $font12px;
+        margin-left: 10px;
+      }
+  }
+  .born-on {
+    .btn {
+      padding:15px;
+    }
+  }
+}
+.form-step {
+  margin-top:10px;
+  @include mobile {
+    width:auto;
+  }
+  h3 {
+    margin-top:0px;
+    margin-bottom:30px;
+  }
+  .form-control {
+    height:35px;
+    border:0px;
+    box-shadow:none;
+    
+  }
+}
+.born-on {
+  position:relative;
+  padding-left:100px;
+  span {
+    font-weight:bold;
+    font-size:$font12px;
+    position:absolute;
+    top:7px;
+    left:10px;
+    
+  }
+  .row {
+    margin:0px -3px;
+    .col-xs-4 {
+      padding:0px 3px;
+    }
+  }
+  .form-control {
+     @include mobile {
+      // padding-left:5px;
+    }
+  }
+}
+.step-title-mobile {
+  background:#fff;
+  padding:20px;
+  color: #23343a;
+  font-weight: 700;
+  margin-top:-5px;
+  border-top:1px solid #ddd;
+  @include laptop-up {
+    display: none;
+  }
+}
+.postcode-filed {
+  position:relative;
+  padding-right:100px;
+  .btn {
+    position:absolute;
+    top:0px;
+    right:0px;
+    width:100px;
+    padding-bottom:7px;
+  }
+}
+.header-step {
+  padding:30px;
+  @include mobile768 {
+    padding:10px;
+    .logo-step {
+      img {
+        width:100px;
+      }
+    }
+    .phone-number {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 12px;
+    }
+    .step-title  {
+      margin:20px 0px 10px 20px;
+    }
+  }
+}
+.step-info {
+  display:none;
+  &.active {
+    display:block;
+  }
+}
+.modal-step {
+  .modal-dialog {
+    @include mobile768 {
+      margin:0px;
+    }
+    .modal-content {
+      border:0px;
+    }
+  }
+}

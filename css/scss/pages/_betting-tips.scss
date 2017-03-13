@@ -1,0 +1,52 @@
+//**
+// Betting Tips
+//**
+
+.list-betting {
+  li {
+    box-shadow:0px 0px 10px 3px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+    background:#fff;
+    -o-transition: all .40s ease-in-out;
+    -ms-transition: all .40s ease-in-out;
+    -moz-transition: all .40s ease-in-out;
+    -webkit-transition: all .40s ease-in-out;
+    transition: all .40s ease-in-out;
+    @include mobile {
+      margin-bottom:20px;
+    }
+    .img-li-betting {
+      height:200px;
+      display:block;
+      &:hover {
+            opacity:0.7;
+          }
+    }
+    .text-li-betting {
+      padding:30px;
+      @include mobile {
+        padding:22px 17px;
+      }
+      h3{
+        font-size: $font24px;
+        margin-top:0px;
+        font-family: 'Francois One', sans-serif;
+        font-weight:normal;
+        color:#23343a;
+        letter-spacing: 1px;
+        @include mobile {
+          font-size:$font20px;
+        }
+        a {
+          color:#23343a;
+          &:hover {
+            opacity:0.7;
+          }
+        }
+      }
+    }
+    &:hover, &:focus {
+      box-shadow:0px 0px 15px 5px rgba(0,0,0,0.2);
+    }
+  }
+}

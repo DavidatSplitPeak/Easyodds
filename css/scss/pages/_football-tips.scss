@@ -1,0 +1,39 @@
+//**
+// Football tips
+//**
+
+
+.scrollbar-tips {
+  margin:0px -5px 0px -9px;
+  @include mobile {
+      margin:0px -5px 0px -9px;
+  }
+  .title-main {
+  	padding:0px 8px;
+
+  }
+  .scrollbar-inner {
+    height:700px;
+    @include mobile {
+      padding-bottom:10px !important;
+      margin-bottom:0px;
+    }
+    .scroll-bar {
+      background: #5accbc;
+      width: 5px;
+      opacity: 1;
+      margin-top:7px;
+    }
+    .scroll-element_track {
+      display:none;
+    }
+  }
+  .scroll-content {
+    padding:8px 40px 15px 10px;
+
+  }
+  .banner-tips {
+  	padding:0px 40px 0px 8px;
+    margin-top:20px;
+  }
+}

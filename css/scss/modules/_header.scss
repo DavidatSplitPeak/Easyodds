@@ -1,0 +1,254 @@
+//**
+// Header
+//**
+
+// Basic header (sign up page, bookmaker page)
+.header-basic {
+  background:#fff;
+  padding:20px 50px;
+  overflow:hidden;
+  .logo { 
+    a {
+      border:0px;
+      float:left;
+      text-align:left;
+      padding:0px;
+    }
+    
+  }
+
+}
+.phone-number {
+  img {
+    margin-right:10px;
+    width:18px;
+    -o-transition: all .40s ease-in-out;
+    -ms-transition: all .40s ease-in-out;
+    -moz-transition: all .40s ease-in-out;
+    -webkit-transition: all .40s ease-in-out;
+    transition: all .40s ease-in-out;
+  }
+  &:hover img{
+    -ms-transform: scale(1.02, 1.02);
+    -webkit-transform: scale(1.02, 1.02);
+    transform: scale(1.2, 1.2);
+  }
+}
+
+
+
+.logo {
+  a {
+    border-right: 1px solid #eaeaea;
+    padding: 14px 10px;
+    padding-left:30px;
+    font-size: $font23px;
+    font-family: 'Montserrat', sans-serif;
+    color: #00bcd3 !important;
+    display:block;
+    span {
+      font-weight: 700;
+      color: #373243 !important;
+    }
+    &:hover {
+      opacity:0.7;
+    }
+    @include tablet {
+      font-size: $font20px;
+    }
+  }
+  img {
+    height:45px;
+  }
+}
+.header {
+  .logo {
+    background:#fff;
+  }
+}
+
+.login-top {
+  input {
+    width: 100%;
+    font-style: italic;
+    border: 0px;
+    padding: 5px 0px;
+    border-bottom: 2px solid #757575;
+    color:#77797a;
+    font-weight:400;
+    background:none;
+    &::-webkit-input-placeholder {
+       color: #757575;
+       font-weight:300;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+       color: #757575;
+       font-weight:300;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+       color: #757575;
+       font-weight:300;
+    }
+
+    &:-ms-input-placeholder {
+       color: #757575;
+       font-weight:300;
+    }
+    &:focus::-webkit-input-placeholder {
+      color: #3a3a3a;
+      font-weight: 400;
+    }
+    &:focus:-moz-input-placeholder {
+       color: #3a3a3a;
+      font-weight: 400;
+    }
+    &:focus::-moz-placeholder {
+       color: #3a3a3a;
+      font-weight: 400;
+    }
+    &:focus:-ms-input-placeholder {
+       color: #3a3a3a;
+      font-weight: 400;
+    }
+  }
+  a.forgot {
+    font-size: $font12px;
+    color: #77797a;
+  }
+  position: relative;
+  padding-right: 180px;
+  .button-top {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.right-header {
+  float: right;
+  padding: 10px;
+    .login-top {
+      float: left;
+    }
+    .btn {
+      padding: 15px;
+      text-transform: uppercase;
+      font-size: $font13px;
+      font-weight: bold;
+      width: 80px;
+      &.btn-warning {
+        margin-left:7px;
+      }
+    }
+    .pull-left {
+      margin-left: 10px;
+    }
+}
+
+
+.search-top {
+  margin-top: 18px;
+  margin-left: 15px;
+  background: #fff;
+  form {
+    position: relative;
+    border: 1px solid #efefef;
+    padding-left: 30px;
+  }
+  .form-control {
+    border: 0px;
+    box-shadow: none !important;
+    font-style: italic;
+  }
+  img {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    width: 20px;
+  }
+}
+
+
+
+.header-mobile-sign {
+  padding: 15px;
+  display: table;
+  width: 100%;
+  position:fixed;
+  z-index:10000;
+  top:0px;
+  @include laptop-up {
+    display: none;
+  }
+  .logo {
+    float:left;
+    a {
+      border:0px;
+      padding:0px;
+    }
+  }
+}
+.top-header-mobile {
+  background: #373243;
+  padding: 5px 15px;
+  display: table;
+  width: 100%;
+  position:fixed;
+  z-index:10000;
+  top:0px;
+  .logo-mobile {
+    text-align:center;
+    img {
+      height:40px;
+    }
+  }
+  .pull-right {
+    position:absolute;
+    right:15px;
+    top:12px;
+      a {
+      display: inline-block;
+      margin-left: 20px;
+      img {
+        width: 25px;
+      }
+    }
+  }
+  .pull-left {
+    position:absolute;
+    left:15px;
+    top:12px;
+      a {
+      display: inline-block;
+      img {
+        width: 20px;
+      }
+    }
+  }
+}
+.header-mobile-pages .logo-mobile {
+  text-align:center
+}
+.bottom-header-mobile {
+  padding: 15px;
+  position:relative;
+  z-index:1000;
+  background:#fff;
+  .search-top {
+    margin: 0px;
+  }
+}
+.header-desktop {
+    display: block;
+   @include mobile768 {
+    display: none;
+  }
+}
+.header-mobile {
+   display: none;
+   @include mobile768 {
+    display: block;
+  }
+}

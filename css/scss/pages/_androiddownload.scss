@@ -1,0 +1,146 @@
+//**
+// androiddownload
+//**
+
+.androiddownload {
+  .footer {
+    margin:0px;
+  }
+}
+.container-download {
+  padding:80px 40px;
+  @include mobile768 {
+    text-align:center;
+    padding:30px 20px;
+  }
+  h2, h3 {
+    font-size:$font46px;
+    font-family: 'Francois One', sans-serif;
+    margin-top:0px;
+    margin-bottom:30px;
+    @include mobile768 {
+      font-size:$font24px;
+    }
+  }
+  h3 {
+    font-size:$font34px;
+    @include mobile768 {
+      font-size:$font22px;
+    }
+  }
+  
+}
+.download-div {
+    margin-top:30px;
+    @include mobile768 {
+      margin:20px 0px;
+    }
+    .btn {
+      font-size:$font16px;
+      padding:10px 15px;
+      text-transform:uppercase;
+      font-weight:normal;
+      margin-bottom:10px;
+      i {
+        font-size:40px;
+        vertical-align:middle;
+        margin-right:10px;
+      }
+    }
+  }
+.main-download {
+  background:#fff;
+  font-size:$font16px;
+  line-height:22px;
+}
+.box-install {
+  display:table;
+  width:100%;
+  font-size:$font22px;
+  line-height:30px;
+  position:relative;
+  color:#23343a;
+  margin-top:40px;
+  @include mobile768 {
+    font-size:$font17px;
+    line-height:20px;
+  }
+  div {
+    box-shadow:0px 0px 10px 1px rgba(0,0,0,0.1);
+    padding:20px 30px;
+    display:table-cell;
+    vertical-align:middle;
+    height:200px;
+    text-align:center;
+    @include mobile768 {
+      height:150px;
+    }
+    span {
+      box-shadow:0px 0px 10px 1px rgba(0,0,0,0.1);
+      position:absolute;
+      top:-20px;
+      left:50%;
+      margin-left:-25px;
+      padding:5px;
+      width:50px;
+      text-align:center;
+      font-size:$font20px;
+      color:#fff;
+      &:before {
+        content:' ';
+        position:absolute;
+        bottom:-15px;
+        left:0px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 25px 0 25px;
+        border-color: #007bff transparent transparent transparent;
+      }
+      &.tag-bg-1 {
+        background:#5fcabf;
+        &:before {
+          border-color: #5fcabf transparent transparent transparent;
+        }
+      }
+      &.tag-bg-2 {
+        background:#e36522;
+        &:before {
+          border-color: #e36522 transparent transparent transparent;
+        }
+      }
+      &.tag-bg-3 {
+        background:#feca0e;
+        &:before {
+          border-color: #feca0e transparent transparent transparent;
+        }
+      }
+      &.tag-bg-4 {
+        background:#2cbbce;
+        &:before {
+          border-color: #2cbbce transparent transparent transparent;
+        }
+      }
+      
+    }
+  }
+}
+.dowload-bottom {
+  background:#2cbbce;
+  text-align:center;
+  padding:50px 0px;
+  color:#fff;
+  @include mobile768 {
+    padding:30px 0px;
+  }
+  .download-div {
+    margin:0px;
+    .btn {
+      border:2px solid #fff;
+      background:none;
+    }
+  }
+  a {
+    color:#fff;
+  }
+}

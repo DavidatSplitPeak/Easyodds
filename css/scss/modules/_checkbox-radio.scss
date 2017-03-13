@@ -1,0 +1,119 @@
+
+
+.checkbox-l {
+  display: inline-block;
+  label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 38px;
+    padding-top:5px;
+  }
+  input[type=checkbox] {
+    display: none;
+  }
+  label:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    line-height:30px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: FontAwesome;
+    padding-top: 1px;
+  }
+  input[type=checkbox]:checked + label:before {
+    content: "\f00c";
+    color: #000;
+    text-align: center;
+    background: #fff;
+    font-size: $font16px;
+  }
+}
+.radio-l {
+  display: inline-block;
+  label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 38px;
+    padding-top:5px;
+  }
+  input[type=radio] {
+    display: none;
+  }
+  label:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    line-height:30px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-family: FontAwesome;
+    padding-top: 1px;
+  }
+  input[type=radio]:checked + label:before {
+    content: "\f00c";
+    color: #000;
+    text-align: center;
+    background: #fff;
+    font-size: $font16px;
+  }
+}
+.checbox-2 {
+  height:30px;
+  display:block;
+  label {
+    min-height:30px;
+    margin-bottom:0px;
+    padding-left:30px;
+    &:before {
+      border-radius: 0px;
+      background: #ebeef0;
+    }
+  }
+  input[type=checkbox]:checked+label:before {
+    background: #ebeef0;
+  }
+}
+.checkbox-3 {
+  height:30px;
+  display:block;
+  label {
+    min-height:30px;
+    margin-bottom:0px;
+    padding-left:30px;
+    &:before {
+      border-radius: 50%;
+      background: #23343a;
+    }
+  }
+  input[type=checkbox]:checked+label:before {
+    content:' ';
+    background: url(../images/check1.png) no-repeat;
+    width:30px;
+    height:30px;
+  }
+}
+.checkbox-4 {
+   height:20px;
+   label {
+    min-height: 0px;
+    padding-left:20px;
+    &:before {
+      width:14px;
+      height:14px;
+      line-height:12px;
+      top:2px;
+    }
+  }
+  input[type=checkbox]:checked+label:before {
+    font-size:$font10px;
+  }
+}

@@ -1,0 +1,56 @@
+//**
+// sitemap
+//**
+
+.content-sitemap {
+  @include mobile {
+    padding: 0px 15px;
+  }
+  @include tablet {
+    padding: 0px 15px;
+  }
+  .box-white {
+    padding:20px 40px;
+    @include mobile {
+      padding:20px 30px;
+    }
+  }
+  .box-sitemap {
+    margin-bottom:30px;
+    h4 {
+      font-size:$font14px;
+      color:#23343a;
+      padding-bottom:7px;
+      margin-bottom:7px;
+      border-bottom:1px solid #f6f6f6;
+    }
+    > ul {
+      > li {
+        > a {
+          &:hover {
+            opacity:0.7;
+          }
+        }
+        > ul {
+          margin-left:20px;
+        }
+      }
+    }
+  }
+}
+.pagination {
+    > li {
+      display:inline-block;
+      margin-right:5px;
+      &.active {
+        a {
+          border:1px solid #00bcd3;
+          background:none;
+          color:#00bcd3;
+        }
+      }
+      >a {
+        color:#00bcd3;
+      }
+    }
+}

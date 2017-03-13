@@ -1,0 +1,253 @@
+//**
+// Match Result
+//**
+.page-content {
+  padding:48px 23px 0px 23px;
+  overflow: auto;
+  @include mobile {
+    padding:10px;
+  }
+}
+
+
+.tab-main {
+  @include mobile768 {
+    float:none !important;
+  }
+  > ul {
+     @include mobile768 {
+        display:none;
+    }
+    > li {
+      display:inline-block;
+      margin-right:20px;
+      position:relative;
+      > a {
+        color:#989da0;
+        display:inline-block;
+        border-bottom:2px solid #f4f4f4;
+        padding-bottom:5px;
+        @include mobile {
+            border:0px;
+        }
+        &:hover {
+          border-bottom:2px solid #e36522;
+        }
+      }
+      &.active {
+        a {
+          border-bottom:2px solid #e36522;
+          color:#4b3a48;
+          @include mobile {
+            border-bottom:0px;
+            padding-top:20px;
+            position:relative;
+          }
+        }
+
+      }
+    }
+  }
+  .select-match {
+    display:none;
+    @include mobile768 {
+      display:block;
+      position:relative;
+    }
+    .btn {
+      text-align:left;
+      i {
+        float:right;
+        margin-top:3px;
+      }
+    }
+    .dropdown-menu {
+      width:100%;
+      padding:0px;
+      li {
+        border-bottom:1px solid #ddd;
+        a {
+          padding:7px;
+        }
+      }
+    }
+    select {
+      background:url(../images/short.png) no-repeat right #fff;
+      border:0px;
+      color:#333;
+      font-weight:bold;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+  }
+  .arrow-tab {
+    @include mobile {
+      position:fixed;
+      left:0px;
+      color:#e36522;
+      margin-left:50px;
+    }
+    @include tablet {
+      display:none !important;
+    }
+  }
+  
+}
+.race-time {
+  position: absolute;
+  right: 157px;
+  margin:0px;
+  .dropdown-blue {
+    position:relative;
+    display:inline-block;
+    font-size:$font12px;
+    margin-bottom:2px;
+    > a {
+      background:#77d3e2;
+      color:#fff;
+      padding:5px 10px;
+      display:block
+    }
+    .dropdown-menu {
+      background:#77d4e3;
+      padding:0px;
+      box-shadow:none;
+      border:0px;
+      border-radius:0px;
+      margin:0px;
+      min-width: 0px;
+      min-width:100%;
+      font-size:$font12px;
+      >li > a {
+        padding:5px 10px;
+        &:hover {
+          background:#64becc;
+        }
+      }
+    }
+    .checkbox-l label{
+      padding-top:0px;
+    }
+  }
+
+}
+.share-match {
+  position:relative;
+  .a-share {
+    color:#00bcd3;
+    font-style:italic;
+    img {
+      width:20px;
+      margin-left:5px;
+    }
+  }
+  .dropdown-menu {
+    width: 40px;
+    min-width: 10px;
+    padding:0px;
+    background:none;
+    border:0px;
+    left:8px;
+    li a {
+      border-bottom:2px solid #ddd;
+      height:40px;
+      line-height:40px;
+      padding:0px;
+      text-align:center;
+      background:#fff;
+      &:hover {
+        color:#00BCD3;
+      }
+    }
+    li:last-child a {
+      border:0px;
+    }
+  }
+}
+
+.banner-1 {
+  margin:65px 0px 20px 0px;
+  .box-banner-1 {
+    width:800px;
+    margin:auto;
+    padding:10px;
+    background:#fff;
+    @include mobile {
+      width:auto;
+    }
+    img {
+      width:100%;
+    }
+  }
+  @include mobile {
+    display:none;
+  }
+  @include tablet {
+    display:none;
+  }
+}
+.title-match {
+  margin-bottom:20px;
+  border-bottom:1px solid #b9c0c7;
+  padding-bottom:20px;
+  color:#23343a;
+  h3 {
+    margin-top:0px;
+    margin-bottom:5px;
+    font-family: 'Francois One', sans-serif;
+    font-size: $font30px;
+    font-weight:normal;
+    @include mobile {
+      font-size: $font22px;
+    }
+  }
+}
+.top-match {
+  display:table;
+  width:100%;
+  margin-bottom:16px;
+  @include mobile {
+    display:block;
+  }
+  .pull-right {
+    @include mobile {
+      display:none;
+    }
+    @include tablet {
+      display:none;
+    }
+  }
+  .tab-main {
+    float:left;
+    @include mobile {
+      float:none;
+    }
+  }
+  .tab-main::-webkit-scrollbar {
+    @include mobile {
+      display: none;
+    }
+  }
+}
+#postiontext {
+  position:relative;
+}
+.cart-table {
+  display:inline-block;
+  width:20px;
+  height:20px;
+  background-image:url(../images/cart1.png);
+  background-repeat:no-repeat;
+  background-position:0 0;
+  cursor:pointer;
+}
+.cart-table.active {
+  background-position:-20px 0;
+}
+.show-popup-resuilt {
+  cursor:pointer;
+  display:block;
+}
+.title-resuilt {
+  padding-bottom:0px !important;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+</head>
+<body class="sign-page">
+  <div class="header-basic hide-mobile">
+     <div class="logo"><a href="#"><img src="images/logo-main.png"></a></div>
+     <div class="pull-right"><div class="phone-number"><img src="images/phone.png"> 0207 751 4479</div></div>
+  </div>
+
+   <div class="row row-no row-sign">
+       <div class="col-md-5">
+       <div class="sign-alert">
+            <div>
+            <img src="images/note-sign.png">
+            The username and password you entered did not match our records. Please double check and try again
+            </div>
+        </div>
+        <div class="form-sign">
+            <div class="hide-desktop phone-sign"><img src="images/phone1.png"> 0207 751 4479</div>
+            <div class="hide-desktop"><div class="logo"><a href="#"><img src="images/logo-main.png"></a></div></div>
+            <form>
+                <h2>Sign Up</h2>
+                <p><input type="text" class="form-control" placeholder="Email"></p>
+                <p><input type="text" class="form-control" placeholder="Password"></p>
+                <p><input type="text" class="form-control" placeholder="Confirm Password"></p>
+                <div class="checkbox-sign">
+                    <div class="checkbox-l">
+                        <input id="checkbox" type="checkbox" name="eventtype" value="checkbox" checked="">
+                        <label for="checkbox"> I’m over 18</label>
+                    </div>
+                    <br>
+                    <div class="checkbox-l">
+                        <input id="checkbox2" type="checkbox" name="eventtype" value="checkbox2">
+                        <label for="checkbox2"> REceive weekly tips & exclusive offers</label>
+                    </div>
+                </div>
+                <div class="row row-button-sign">
+                    <div class="col-xs-6"><button class="btn btn-lg btn-warning btn-block btn-shadow join-btn">JOIN</button></div>
+                    <div class="or-sign">or</div>
+                    <div class="col-xs-6"><button class="btn btn-lg btn-login btn-block"><i class="fa fa-facebook"></i> LOG IN</button></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="right-sign">
+            <h2>Get Access to</h2>
+            <ul>
+                <li>
+                    <span class="left-img-sign"><img src="images/get-icon.png"></span>
+                    <span class="right-text-sign">Over 20 bookmakers in our matrices</span>
+                </li>
+                <li>
+                    <span class="left-img-sign"><img src="images/get-icon1.png"> </span>
+                    <span class="right-text-sign">One-time sign up for all recommended bookmakers</span>
+                </li>
+                <li>
+                    <span class="left-img-sign"><img src="images/get-icon2.png"> </span>
+                    <span class="right-text-sign">Expert tips</span>
+                </li>
+                <li>
+                    <span class="left-img-sign"><img src="images/get-icon3.png"> </span>
+                    <span class="right-text-sign">Daily horse alert service</span>
+                </li>
+                <li>
+                    <span class="left-img-sign"><img src="images/get-icon4.png"> </span>
+                    <span class="right-text-sign">No extra fees whatsoever</span>
+                </li>
+            </ul>
+            <a href="#" class="faq-sign"><img src="images/faq.png"></a>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
+<script>
+    $(document).ready( function() {
+        $('.slider-home').slick({
+            dots: true,
+            infinite: false,
+            autoplay: true
+        });
+        $('.slider-customer').slick({
+            dots: true,
+            infinite: false,
+            autoplay: true
+        });
+        $('.toogle-menu').click (function() {
+         $('.slide-menu').toggleClass('open');
+         $('.back-slidemenu').toggle();
+     });
+        $('.back-slidemenu').click (function() {
+         $('.slide-menu').removeClass('open');
+         $(this).hide();
+     });
+        $('.scrollbar-inner').scrollbar();
+
+        var heightwindow = $(window).height();
+        var heightsign = heightwindow - 80;
+        $('.right-sign').css('min-height', heightsign)
+
+        $('.join-btn').click(function () {
+            $('.sign-alert').show();
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

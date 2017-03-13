@@ -1,0 +1,28 @@
+//**
+// behistory
+//**
+
+.box-behistory {
+  position:relative;
+  padding-left:30px;
+  margin-bottom:15px;
+  span {
+    position:absolute;
+    left:0px;
+    top:0px;
+    font-size:15px;
+    color:#00bcd3;
+    font-weight:bold;
+  }
+  h4 {
+    margin:0px;
+    font-size:15px;
+    font-weight:bold;
+    color:#77797a;
+  }
+}
+.selection-history {
+  padding:10px 15px;
+  border-bottom:solid 1px #d1d3d4;
+  font-weight:bold;
+}

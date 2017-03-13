@@ -1,0 +1,118 @@
+//**
+// Bookmaker offer
+//**
+
+
+.content-offer {
+    padding:60px 0px;
+    position:relative;
+    @include mobile {
+      padding:20px 0px;
+    }
+    .main-offer {
+      width:680px;
+      margin:auto;
+      @include mobile {
+        width: auto;
+      }
+      @include tablet {
+        width: 400px;
+        padding:0px 15px;
+      }
+      h2 {
+        font-size: $font22px;
+        color: #373243;
+        font-family: 'Francois One', sans-serif;
+        font-weight:normal;
+        margin-top:0px;
+        @include laptop-up {
+          font-size: $font28px;
+        }
+        @include mobile { 
+          margin-left:15px;
+        }
+      }
+      .table-offer {
+        width:100%;
+        background:#4b3a48;
+        color:#fff;
+        border-radius:7px;
+        overflow:hidden;
+        @include mobile { 
+          border-radius:0px;
+        }
+        tr {
+          th  {
+            background:#00bcd3;
+            padding:15px 20px;
+            font-size:13px;
+            font-weight:normal;
+            border-bottom:1px solid #f4f4f4;
+            @include mobile {
+              padding:10px 15px;
+            }
+          }
+          td {
+            font-size:$font12px;
+              padding:7px 5px;
+            border-bottom:1px solid #f4f4f4;
+            @include laptop-up {
+              font-size:$font16px;
+            padding:10px 20px;
+            }
+            img {
+              height:25px;
+              @include mobile {
+                height:18px;
+              }
+            }
+            span {
+              display:block;
+              border-left:1px solid #6b5568;
+              padding-left:10px;
+              @include laptop-up {
+                padding-left:30px;
+              }
+            }
+          }
+          &:last-child {
+            td {
+              border:0px;
+            }
+          }
+        }
+        .button-offer {
+          position:relative;
+          button {
+            padding:13px 5px;
+            font-size:$font13px;
+            float:right;
+            @include laptop-up {
+              padding:20px;
+              font-size:$font14px;
+            }
+            &.btn-yellow {
+              width:93px;
+              @include laptop-up {
+                width:150px;
+              }
+            }
+            &.btn-skip {
+              border:0px;
+              background:none;
+              font-size:12px;
+              color:#989da0;
+              margin-right:12px;
+            }
+          }
+        }
+        .select-un {
+          font-size:12px;
+          color:#989da0;
+          @include mobile {
+            text-align:left;
+          }
+        }
+      }
+    }
+}
